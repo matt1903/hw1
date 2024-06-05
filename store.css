@@ -1,0 +1,782 @@
+body{
+    font-size: 18px;
+    margin: 0px;
+    width: 100%;
+    background-color: #ecf1f1;
+}
+
+nav{
+    display: flex;
+    background-color: #008184;
+    flex-direction: column;
+    font-family: Open Sans,Lucida Grande,Lucida,Verdana,sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    justify-content: flex-start;
+    width: 100%;
+    color: white;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Tutto ciò riguarda il primo livello della nav*/
+.first-level-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 43px;
+    width: 100%;
+    border-bottom: 1px solid #7fcbcd;
+}
+
+/*Parte Sinistra della nav -> primo livello*/
+.first-menu-left{
+    display: flex;
+    height: 100%;
+}
+
+.first-menu-left div{
+    border: 1px solid #7fcbcd;
+    height: 100%;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+.pro, .edu{     /*Scritte abbreviate nel primo livello della nav*/
+    display: none;
+}
+
+/*animazione div*/
+.first-menu-left div:hover, .icon-module:hover, .sign-in-module:hover{
+    background-color: #005c5f;
+}
+
+/*animazione barra di ricerca*/
+#search-form:hover{
+    box-shadow: 0 0 0 1px #7fcbcd;      /*quando sopra col cursore crea un ombra di quel colore sul form*/
+}
+
+/*Elementi del primo livello della nav -> Layout*/
+.first-level-nav div a{
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 10.5px;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Parte Destra della nav -> primo livello*/
+.first-menu-right{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/*div padre del form di ricerca*/
+.first-menu-right #search-div{
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0px 12px;
+    position: relative;
+    width: 300px;
+}
+
+#search-form{
+    align-items: center;
+    background-color: #006d70;
+    border-radius: 30px;
+    display: flex;
+    height: 30px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    color: #aacecf;
+}
+
+/*Icona di ricerca*/
+.search-icon{
+    height: 20px;
+    width: 20px;
+    margin: 0 8px 0 12px;
+    display: flex;
+}
+
+#search-input{
+    width: 80%;
+    border: 0px;
+    margin: 0px;
+    background-color: transparent;
+    caret-color: #aacecf;           /*questo mi permette di cambiare il colore del cursore di testo*/
+    color: #aacecf;
+}
+
+#search-input::placeholder{     /*questa sintassi mi permette di accedere al parametro placeholder di un input*/
+    color: #aacecf;
+}
+
+#search-input:focus{        /*questa sintassi mi permette di modoficare il comportamento dell'input quando è evidenziato*/
+    outline: 0px;
+    border: 0px;
+}
+
+/*Icona del carrello*/
+.icon-module{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #7fcbcd;
+}
+
+
+.icon-module a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-menu-right .sign-in-module{
+    padding: 0 20px;
+}
+
+.sign-in-module a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Tutto ciò che riguarada la nav al secondo livello*/
+.second-level-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 57px;
+    width: 100%;
+    z-index: 1;
+}
+
+.menu-app-div:hover, .logo-box:hover{
+    background-color: #005c5f;
+}
+
+.menu-app-div .com:hover{
+    .material-symbols-outlined{
+        transform: rotate(180deg);
+    }
+}
+
+    .logo-box{
+        display: flex;
+        height: 57px;
+        align-items: center;
+        padding: 0 20px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .second-level-nav a{
+        display: flex;
+        height: 57px;
+        align-items: center;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+
+    /*Logo di arduino nel secondo livello della nav*/
+    .arduino-logo{
+        display: flex;
+        height: 28px;
+        width: 48px;
+        cursor: pointer;
+    }
+
+/*Container degli elementi a destra nel secondo livello della nav*/
+.second-level-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 57px;
+    justify-content: space-between;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.second-level-menu{
+    display: flex;
+    height: 100%;
+    font-weight: bold;
+}
+
+#sub-menu{                      /*Menu che si apre con hover del mouse su Community nel nav*/
+    background-color: #005c5f;
+    position: absolute;
+    min-width: 100%;
+}
+
+.burger-menu{
+    display: none;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #7fcbcd;
+}
+
+.burger-icon{
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-icon svg{
+    height: 18px;
+    width: 18px;
+}
+
+#root{
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#product-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin-bottom: 40px;
+    border: 1px solid rgba(198, 198, 198, 0.356);
+    background-color: white;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.codes-container{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: center;
+    padding: 10px;
+    max-width: 600px;
+    height: 100%;
+}
+
+.quantity-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 300px;
+    height: 100%;
+}
+
+.h1-style{
+    font-family: open sans;
+    font-weight: bold;
+    color: #006d70;
+}
+
+.img-style{
+    height: 350px;
+    width: 400px;
+    margin-left: 50px;
+}
+
+.span-style{
+    font-size: 20px;
+    font-family: open sans;
+    font-weight: 300;
+    color: #008184;
+    margin-right: 20px;
+}
+
+.button-style{
+    font-family: open sans;
+    font-size: 20px;
+    color: white;
+    border-radius: 32px;
+    border: 0px;
+    background-color: #006d70;
+    padding: 6px 28px;
+}
+
+#quantity-box{
+    padding: 6px 12px;
+    border: 3px solid #008184;
+    font-size: 20px;
+    width: 50px;
+    border-radius: 20px;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    color: white;
+    background-color:#008184;
+    height: 100%;
+    display: inline-block;
+    padding: 0px;
+    font-family: Open Sans,Lucida Grande,Lucida,Verdana,sans-serif;
+}
+
+/*Testa del footer*/
+.footer-head{
+    height: 42px; 
+    display: flex;
+    border-bottom:1px solid #7fcbcd;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*SVG della scritta Arduino*/
+.footer-head .arduino-text{
+    padding: 0 20px;
+    justify-content: ceter;
+    align-items: center;
+    display: flex;
+}
+
+/*container del tasto back-to-top*/
+.back-top{
+    align-items: center;
+    border-left: 1px solid #7fcbcd;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    padding: 0 16px;
+    font-size: 10.5px;
+}
+
+.back-top:hover{
+    background-color: #005c5f;
+}
+
+/*icona della freccia per tornare su*/
+.row-icon{
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+}
+/*contenuto principale del footer*/
+.main-content-footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*elemento che contiene i link alle pagine in basso a sinistra del footer*/
+.footer-menu{
+    display: flex;
+    flex-direction: row;
+    font-size: 10.5px;
+    letter-spacing: 1px;
+}
+/*contenitore delle scritte sulla sinistra del menu del footer*/
+.left-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 40px;
+}
+
+.left-menu a, .right-menu a{
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+/*prino e ultimo a della lista di sinistra non hanno margin top o bottom*/
+.footer-menu .first-menu-item{
+    margin-top: 0px;
+}
+
+.footer-menu .last-menu-item{
+    margin-bottom: 0px;
+}
+
+/*contenitore delle scritte sulla destra del menu del footer*/
+.right-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*'NEWSLETTER' e 'FOLLOW US' sono degli h4*/
+h4{
+    margin: 0px 0px 16px 0px;
+    font-weight: 700;
+    font-family: Open Sans,Lucida Grande,Lucida,Verdana,sans-serif;
+    font-size: 13px;
+    text-align: left;
+    letter-spacing: 1px;
+}
+
+#newsletter-arduino{
+    font-family: Open Sans,Lucida Grande,Lucida,Verdana,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    left: 0px;
+    max-width: 400px;
+    position: relative;
+    width: 400px;
+}
+
+#newsletter-email{
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px #fff;
+    color: #000;
+    flex-grow: 1;
+    font-size: 14px;
+    height: 35px;
+    margin-right: 12px;
+    padding-left: 10px;
+    letter-spacing: 1px;;
+}
+
+.news-form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.subscribe-button{
+    border-radius: 20px;
+    padding: 9px 18px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #005c5f;
+    border: 0px;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.subscribe-button:hover{
+    transform: translateY(2px);
+}
+
+#social-container{
+    max-width: 270px;
+    width: 100%;
+} 
+
+.social-icons-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.social-icons-container h4{
+    max-width: 270px;
+}
+
+.social-icons-container a{
+    background-color: #005c5f;
+    border-radius: 50%;
+    display: block;
+    font-family: Open Sans,Lucida Grande,Lucida,Verdana,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    height: 35px;
+    position: relative;
+    transition: background-color .3s;
+    width: 35px;
+    color: white;
+}
+
+#social-container .social-icons-container .icon-container{
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    width: 35px;
+}
+
+.icon-container svg{
+    height: 13px;
+    width: 13px;
+}
+
+#footer-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-top: 1px solid #7fcbcd;
+    align-items: center;
+}
+
+#footer-info .arduino-license{
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.info-container{
+    display: flex;
+    margin: auto;
+}
+
+#footer-info a{
+    font-size: 10.5px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#footer-info span:hover, .footer-menu span:hover{
+    color: #f1c40f;
+}
+
+.social-icons-container .icon-container a:hover{
+    background-color: white;
+}
+
+.social-icons-container .icon-container a.facebook:hover, .social-icons-container .icon-container a.linkedin:hover{
+    color: #3f65b6;
+}
+
+.social-icons-container .icon-container a.instagram:hover{
+    color: #db3075;
+}
+
+.social-icons-container .icon-container a.twitter:hover, .social-icons-container .icon-container a.github:hover{
+    color:black;
+}
+
+.social-icons-container .icon-container a.youtube:hover{
+    color: red;
+}
+
+.hidden{
+    display: none;      /*una classe da aggiungere agli elementi html con js*/
+}
+
+.clickedText{
+    display: inline;
+    font-size: 15px;
+    color: #008184;
+    font-family: Typonine Sans Regular,Lucida Grande,Lucida,Verdana,sans-serif;
+}
+
+/*
+    stile per la modale dei cookies
+*/
+#cookie-modal-container, #chatbot-modal-container{
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#cookie-modal, #chatbot-modal{
+    display: flex;
+    width: 800px;
+    height: 650px;
+    border-radius: 5px;
+    background-color: white;
+    flex-direction: column;
+}
+
+.cookie-header, #chatbot-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    height: 40px;
+}
+
+.cookie-header button, #chatbot-header button{
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    padding: 8px;
+}
+
+#cookie-arrow, #chat-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36.7px;
+    width: 36.7px;
+    cursor: pointer;
+}
+
+#full-cookie{           /*stile del pulsante per visualizzare piu info dei cookies*/
+    background-color: rgb(240, 240, 240);
+    border: 1px solid transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cookie-content{        
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.h1-text{
+    font-size: 48px;
+    margin-bottom: 8px;
+    font-family: Typonine Sans Regular,Lucida Grande,Lucida,Verdana,sans-serif;
+    margin-top: 0px;
+    font-weight: 550;
+    margin-top: 0px;
+}
+
+.header-text{
+    font-family: Typonine Sans Regular,Lucida Grande,Lucida,Verdana,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 1;
+    margin: 0px;
+}
+
+.no-scroll{                     /*Classe per bloccare lo scroll della pagina*/
+    overflow: hidden;
+}
+
+#cookie-choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+}
+
+.option-all{
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    margin-right: 4px;
+    margin-left: 4px;
+    border-radius: 32px;
+    border: 1px solid transparent;
+    background-color: rgb(230, 230, 230);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.option-all:focus{
+    background-color: white;
+    outline-width: 2px;         /*outline permette di mettere un bordo esterno all'elemento*/
+    outline-offset: 2px;
+    outline-color: lightseagreen;
+    outline-style: solid;
+}
+
+.option-all:hover{
+    border: 1px solid black
+}
+
+.cookie-content #second-h1{
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-family: Typonine Sans Regular,Lucida Grande,Lucida,Verdana,sans-serif;
+    margin-top: 0px;
+    font-weight: 550;
+    margin-top: 0px;
+}
+
+#save-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+#snc-button{
+    margin: 8px;
+    padding: 8px 24px;
+    border-radius: 64px;
+    background-color: #008184;
+    color: white;
+    font-weight: bolder;
+    font-family: Open Sans;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin-right: 30px;
+}
+
+#snc-button:hover{
+    transform: translateY(2px);
+}
+
+
+@media screen and (max-width: 1024px){      /*Media per sistemare lo spazio nel secondo livello nav quando lo schermo è piccolo*/
+    .second-level-menu{
+        display: none;
+    }
+    .burger-menu{
+        display: flex;
+    }
+
+    #homepage-contaier{
+        flex-direction: column;
+        margin-top: 20px;
+        max-width: 780px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 833px){       /*Media per sistemare le scritte nel primo livello nav quando lo schermo diventa estremamente piccolo*/
+    .sign-in-module{
+        display: none;
+    }
+    .first-menu-left .longPro, .longEdu{
+        display: none;
+    }
+    .first-menu-left .pro, .edu{
+        display: inline;
+    }
+    #search-div{
+        width: 100%;        /*non funziona --> div che contiene il form per la ricerca nella nav*/
+    }
+}

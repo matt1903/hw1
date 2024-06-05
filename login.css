@@ -1,0 +1,159 @@
+body{
+    height: 100vh;
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#root{
+    width: 70%;
+    height: 100%;
+    background-color: #00474911;
+}
+
+#side{
+    background-image: url(Immagini/login/background.36cfe49e.jpg);
+    width: 30%;
+    height: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+#header-div{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 36px;
+    box-sizing: border-box;
+}
+
+#back-arrow-btn span{
+    color: #00979d;
+    font-size: 32px;
+}
+
+#back-arrow-btn{
+    background-color: transparent;
+    border: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+#long-div-logo svg{
+    fill: #00979d;
+}
+
+#long-div-logo{
+    margin: auto;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0 48px;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field{
+    width: 315px;
+    height: 35px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+}
+
+#sub{
+    align-self: flex-end;       /*align-self server per dare un allineamento al solo elemento in cui viene richiamata la funzione*/
+    border-radius: 100px;
+    background-color: #00979d;
+    color: white;
+    border: 0px;
+    font-family: open Sans;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 9px 18px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#forgot-psw{
+    text-decoration: none;
+    font-family: open Sans;
+    font-size: 14px;
+    color: #00979d;
+    align-self: flex-start;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+h1{
+    font-family: open Sans;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#register{
+    text-decoration: none;
+    font-size: 14px;
+    font-family: open Sans;
+    margin: 30px;
+}
+
+#register a{
+    text-decoration: none;
+    color: #00979d;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;   
+}
+
+#rm-hd{
+    width: 390px;
+}
+
+#empty-fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: open Sans;
+    font-weight: 700;
+    background-color: rgba(228, 0, 0, 0.605);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
